@@ -10,10 +10,12 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
-                    <a href="{{ route('createEditExpense') }}" class="text-blue-500 hover:underline">Add new Expenses</a>
-                    
+                    @livewire('create-edit-expense')
                 </div>
             </div>
         </div>
     </div>
 </x-app-layout>
+
+
+{{-- Add route first --}}
