@@ -2,12 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Models\Expense;
 use Livewire\Component;
 
 class ShowExpenses extends Component
 {
+    public $expenses;
+
     public function render()
     {
-        return view('livewire.show-expenses');
+        $this->expenses = Expense::all();
+        return view('livewire.show-expenses', compact('expenses'));
     }
 }
